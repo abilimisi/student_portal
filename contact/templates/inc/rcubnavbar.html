@@ -1,0 +1,199 @@
+{% load static %}
+
+<!--- icon-header -->
+
+      <div id="icon-header">
+        <nav class="navbar navbar-expand-lg " id="icon-header-mini">
+          <div class="container-fluid">
+            <i class="uil uil-lock icon"><a href="{% url 'index' %}">Home</a></i>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+              <ul class="navbar-nav me-auto mb- mb-lg-0">
+                <li class="nav-item">
+                  <i class="uil uil-phone"><a href="{% url 'contact' %}">contact</a></i>
+                </li>
+                <li class="nav-item">
+                  <i class="uil uil-image"><a href="{% url 'gallery_view' %}">gallery</a></i>
+                </li>
+                <li class="nav-item">
+                  <a href="https://api.whatsapp.com/send?phone=6281350918"><i class="uil uil-whatsapp"></i></a>
+                </li>
+                <li class="nav-item">
+                  <a href="https://www.youtube.com/channel/UCtrcypQvMVC8utr7xWZ2x-w/videos" target="_blank"><i class="uil uil-youtube"></i></a>
+                </li>
+                <li class="nav-item">
+                  <a href="https://www.instagram.com/rcub_students/"><i class="uil uil-instagram"></i></a>
+                </li>
+                <li class="nav-item">
+                  <a href="https://twitter.com/RCUB_University"><i class="uil uil-twitter"></i></a>
+                </li>
+                <li class="nav-item">
+                  <a href="mailto:asbadarsh21@gmail.com"><i class="uil uil-envelope"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+   
+      <!-- heading -->
+    
+      
+      <div class="container-fluid " id="main-logo-heading" >
+        <ul id="logo-heading" >
+          <li><img src="{% static 'img/logo1.jpg' %}?v=2" alt="Logo" width="80" height="80" ></li>
+          <li id="heading" >ASB UNIVERSITY BAGALKOTE<div>KARNATAKA</div> </li>
+        </ul>
+      </div>
+
+
+
+       <!---marque-news -->
+    
+    
+            <nav class="navbar navbar-expand-lg" id="marquee-news">
+              <div class="container-fluid">
+                <marquee class="" scrollamount="10" behavior="scroll" direction="left" onmouseover="this.stop();"
+                    onmouseout="this.start();">
+                    <div id="marque-li">
+                        <ul id="new-marquee" class="">
+                            <li>
+                                <div class="datenews">
+                                    UG : ADMISSION OPEN TILL 30/10/2024.
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="datenews">
+                                    PG : ADMISSION OPEN TILL 30/10/2024.
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="datenews">
+                                    PHD : EXAMS SCEDULED.
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="datenews">
+                                  UG : ADMISSION OPEN TILL 30/10/2024.
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="datenews">
+                                  PG : ADMISSION OPEN TILL 30/10/2024.
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="datenews">
+                                    Date New Notification.
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </marquee>
+              </div>
+            </nav>
+    
+
+    
+    
+
+      <!--- header -->
+      <div id="big-header">
+      <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <li class="nav-item">
+                  <a href="{% url 'index' %}" class="nav-link" id="big-header-items">HOME</a>
+              </li>
+             </li>
+             
+              <li class="nav-item">
+                <a class="nav-link active" href="{% url 'about2' %}" role="button"  id="big-header-items">
+                  ABOUT
+                </a>
+
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="big-header-items">
+                  ACADEMICS
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="{% url 'ug_course_details' course_name='BSc (Bachelor of Science)' %}">BSc</a></li>
+                  <li><a class="dropdown-item" href="{% url 'ug_course_details' course_name='BCA (Bachelor of Computer Application)' %}">BCA</a></li>
+                  <li><a class="dropdown-item" href="{% url 'ug_course_details' course_name='B.COM (Bachelor of Commerce)' %}">BCom</a></li>
+                  <li><a class="dropdown-item" href="{% url 'ug_course_details' course_name='BA (Bachelor of Arts)' %}">BA</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="big-header-items">
+                  ADMISSION
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/BSc_admission_Form">BSc</a></li>
+                  <li><a class="dropdown-item" href="/BSc_admission_Form">BCA</a></li>
+                  <li><a class="dropdown-item" href="/BSc_admission_Form">BCom</a></li>
+                  <li><a class="dropdown-item" href="/BSc_admission_Form">BA</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="big-header-items">
+                  EXAMINATION
+                </a>
+                <ul class="dropdown-menu">
+                  {% if student %}
+                  <li><a class="dropdown-item" href="{% url 'results' %}">RESULTS</a></li>
+                  {% else %}
+                  <li><a class="dropdown-item" href="{% url 'login'%}">LOGIN TO VIEW RESULTS</a></li>
+                  {% endif %}
+                  <li><a class="dropdown-item" href="{% url 'time_table' %}">TIME TABLE</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="{% url 'gallery_view' %}" role="button" aria-expanded="false" id="big-header-items">
+                  GALLERY
+                </a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="big-header-items">
+                  STUDY
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="{% url 'UG_Study' %}">PREVIOUS YEAR QUESTION PAPERS</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <li class="nav-item">
+                  <a href="{% url 'contact' %}" class="nav-link" id="big-header-items">CONTACT</a>
+              </li>
+
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link active" href="{% url 'notification_view' %}" id="big-header-items">NOTIFICATION</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+
+
+   
+    

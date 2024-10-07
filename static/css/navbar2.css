@@ -1,0 +1,251 @@
+/*#icon-header{
+      padding:0px;
+      margin: 0px;
+}
+
+#icon-header #icon-header-mini{
+   
+    background-color:#07223d;
+}
+
+#icon-header i {
+    padding-left: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+#icon-header  i a{
+    text-decoration: none;
+    color: white;
+    padding-left: 5px;
+   
+    font-family: var(--inter);
+}
+
+marquee{
+    padding:0px;
+    margin: 0px;
+} 
+
+#marquee-news{
+    
+    color:white;
+    background-color:#224363;
+}
+
+#marque-li ul{
+    display: inline-flex;
+    list-style: none;
+}
+
+#marque-li ul li{
+    padding-left: 30px;
+    font-family: var(--inter);
+}
+
+
+
+#sign-out-btn{
+    display: flex;
+    text-decoration: none;
+   
+}
+
+#sign-out-btn a button{
+    border-radius: 10px;
+    font-size: small;
+    border: #999;
+  
+}
+
+#sign-out-btn a button:hover{
+    background-color:black;
+    color: white;
+}
+#big-header{
+  
+    background-color:white;
+    
+
+}
+
+#big-header #big-header-items{
+    color:black;
+    font-family: var(--inter);
+    font-size: medium;
+    font-weight: 700;
+ 
+    margin-left: 26px;
+   
+}
+
+
+#big-header ul li a:hover{
+       text-decoration: underline #7e1620;
+}
+
+#heading{
+  
+    padding-left: 20px;
+    font-size: 30px;
+    color:brown;
+    text-align: center;
+    justify-content: center;
+    font-family: sans-serif;
+    font-weight: 800;
+}
+
+#main-logo-heading{
+   
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 10px;
+    padding-right:80px;
+    background-color: snow;
+}
+
+
+#main-logo-heading ul li{
+     list-style: none;
+}
+
+#logo-heading{
+    display: inline-flex;
+}
+*/
+
+/* ------------------------------------------------------------------- */
+
+
+/* General Reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Icon Header Section */
+#icon-header {
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to right, #07223d, #224363);
+}
+
+#icon-header i {
+    padding-left: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+#icon-header i a {
+    text-decoration: none;
+    color: white;
+    padding-left: 5px;
+    font-family: var(--inter);
+}
+
+/* Marquee News Section */
+#marquee-news {
+    color: white;
+    background: linear-gradient(45deg, #07223d, #224363);
+    padding: 10px;
+}
+
+#marque-li ul {
+    display: inline-flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#marque-li ul li {
+    padding-left: 30px;
+    font-family: var(--inter);
+}
+
+
+/* Big Header (Main Navbar) */
+#big-header {
+    background-color: orangered;
+    margin-top: 5px;
+}
+
+#big-header #big-header-items {
+    color: white;
+    font-family: var(--inter);
+    font-size: medium;
+    font-weight: 700;
+    margin-left: 26px;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+#big-header #big-header-items:hover {
+    color: white;
+    
+}
+
+#big-header ul li a:hover {
+    text-decoration:white;
+}
+
+/* Main Logo and Heading */
+#heading {
+    padding-left: 20px;
+    font-size: 30px;
+    color:black;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+#main-logo-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px 0;
+    background: radial-gradient(circle, #ffffff, #93aec9);
+}
+
+#main-logo-heading ul {
+    display: flex;
+    align-items: center;
+}
+
+#main-logo-heading ul li {
+    list-style: none;
+}
+
+#main-logo-heading ul li img {
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Gradient Hover for Dropdown */
+.nav-item .dropdown-menu {
+    background: linear-gradient(to bottom, #224363, #07223d);
+    color: white;
+}
+
+.nav-item .dropdown-menu a {
+    color: white;
+}
+
+.nav-item .dropdown-menu a:hover {
+    /* background-color: #7e1620; */
+    background: linear-gradient(to bottom, #224363, #07223d);
+    
+}
+
+/* Add a subtle hover effect to links */
+.navbar-nav .nav-link {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    /* background-color: #7e1620; */
+    background: linear-gradient(to bottom, #224363, #07223d);
+    color: white;
+}

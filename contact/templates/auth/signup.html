@@ -1,0 +1,71 @@
+{% extends 'layout/main.html' %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6 shadow p-4">
+            <form action="{% url 'signup' %}" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="text-center">
+                    <h3>Student - SIGNUP</h3><br>
+                    {% for message in messages %}
+                        <div class="alert alert-info">{{ message }}</div>
+                    {% endfor %}
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username" placeholder="Enter Username" class="form-control" required>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="first_name">First Name</label>
+                    <input type="text" name="first_name" id="first_name" placeholder="Enter First Name" class="form-control" required>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="last_name">Last Name</label>
+                    <input type="text" name="last_name" id="last_name" placeholder="Enter Last Name" class="form-control" required>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Enter Email" class="form-control" required>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="register_number">Register Number</label>
+                    <input type="text" name="register_number" id="register_number" placeholder="Enter Register Number" class="form-control" required>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="college_id">College ID</label>
+                    <input type="text" name="college_id" id="college_id" placeholder="Enter College ID" class="form-control" required>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="profile_picture">Profile Picture</label>
+                    <input type="file" name="profile_picture" id="profile_picture" class="form-control">
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="pass1">Password</label>
+                    <input type="password" name="password1" id="pass1" placeholder="Enter Password" class="form-control" required>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="pass2">Confirm Password</label>
+                    <input type="password" name="password2" id="pass2" placeholder="Confirm Password" class="form-control" required>
+                </div>
+
+                <button type="submit" class="btn mt-3 shadow btn-success px-4">Signup</button>
+                <button type="button" class="btn float-right mt-3 shadow btn-danger px-4">
+                    <a style="text-decoration: none; color: white;" href="{% url 'login' %}">Login</a>
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'layout/main.html' %}
+{% block content %}
+<body>
+    <h1><b>Admission Form Confirmation</b></h1>
+
+    <p>your admission form has been successfully submitted....wait for reply messege it takes some working days</p>
+
+    <p>Thank you for submitting your admission form. Here are the details you provided:</p>
+
+    <ul>
+        <li><strong>Full Name:</strong> {{ fullname }}</li>
+        <li><strong>Image:</strong>Student Image</li>
+        <li><strong>File:</strong> <a href="{{ file.url }}" target="_blank"></a>PU Marks Card</li>
+        <li><strong>Branch:</strong> {{ branch }}</li>
+        <li><strong>Father's Name:</strong> {{ father_name }}</li>
+        <li><strong>Date of Birth:</strong> {{ date_of_birth }}</li>
+        <li><strong>Gender:</strong> {{ gender }}</li>
+        <li><strong>Caste:</strong> {{ caste }}</li>
+        <li><strong>Mobile:</strong> {{ mobile }}</li>
+        <li><strong>Email:</strong> {{ email }}</li>
+        <li><strong>Aadhar:</strong> <a href="{{ adhar.url }}" target="_blank"></a>My Aadhar</li>
+    </ul>
+
+{% endblock %}

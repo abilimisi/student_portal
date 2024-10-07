@@ -1,0 +1,134 @@
+{% extends 'layout/main.html' %}
+{% block content %}
+
+<div class="container m-3">
+    <div class="row justify-content-center">
+        <div class="col-md-6 shadow">
+            <form method="POST" enctype="multipart/form-data">
+
+                    {% csrf_token %}
+
+                    <div class="text-center">
+
+                        <h3><b>Admission Application Form<b></h3>
+                        <H5><b>(BSc)</b></H5><br>
+
+                    </div>
+
+                    <hr>
+
+                    <div class="form-group pt-4">
+                       <label for="name">FULLNAME</label>
+                        <div class="pt-2">
+                            <input type="text" name="fullname" id="name" placeholder="As Per Adhar" class="form-control" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group pt-4">
+                       <label for="fullname">IMAGE</label>
+                       <input type="file" name="image" id="fullname" placeholder="Uplpoad Your Image" required>
+                    </div>
+
+                    <div class="form-group pt-4">
+                       <label for="file">PU MARKS CARD</label>
+                       <input type="file" name="file" id="file" placeholder="Uplpoad Your PU Marks Card" required>
+                    </div>
+
+
+                    <div class="form-group pt-4">
+
+                        <label>CHOOSE BRANCH</label>
+
+                        <label>
+                            <input type="radio" name="branch" value="PCM" required>
+                            PCM
+                        </label>
+
+                        <label>
+                            <input type="radio" name="branch" value="PMCs">
+                            PMCs
+                        </label>
+
+                        <label>
+                             <input type="radio" name="branch" value="PMS">
+                             PMS
+                        </label>
+
+                        <label>
+                             <input type="radio" name="branch" value="CBZ">
+                             CBZ
+                        </label>
+
+                    </div>
+
+                    <div class="form-group pt-4">
+                       <label for="father_name">FATHER NAME</label>
+                        <div class="pt-2">
+                            <input type="text" name="father_name" id="father_name" placeholder="Enter Your Father Name" class="form-control" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group pt-4">
+                       <label for="dob">DATE OF BIRTH</label>
+                        <div class="pt-2">
+                            <input type="date" name="date_of_birth" id="dob" placeholder="Enter Your Date Of Birth" class="form-control" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group pt-4">
+
+                        <label>GENDER</label>
+
+                        <label>
+                            <input type="radio" name="gender" value="male" required>
+                            Male
+                        </label>
+
+                        <label>
+                            <input type="radio" name="gender" value="female">
+                            Female
+                        </label>
+
+                        <label>
+                             <input type="radio" name="gender" value="others">
+                             Others
+                        </label>
+                    </div>
+
+                    <div class="form-group pt-4">
+                        <label for="caste">CASTE</label>
+                        <div class="pt-2">
+                            <input type="text" name="caste" id="caste" placeholder="Enter Your Caste" class="form-control" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group pt-4">
+                         <label for="mob">MOBILE NO</label>
+                        <div class="pt-2">
+                             <input type="text" name="mobile" id="mob" placeholder="Enter Mobile Number"class="form-control" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group pt-4">
+                        <label for="email">EMAIL</label>
+                        <div class="pt-2">
+                            <input type="email" name="email" id="email" placeholder="Enter Email" class="form-control" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group pt-3">
+                        <label for="adhar">UPLOAD ADHAR</label>
+                        <input type="file" name="adhar" id="adhar">
+                    </div>
+
+                    <button type="submit" class="btn mt-3 shadow btn-success px-4">Submit</button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

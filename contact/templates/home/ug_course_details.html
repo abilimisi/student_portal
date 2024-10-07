@@ -1,0 +1,36 @@
+{% extends 'layout/main.html' %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div class="card shadow-lg">
+                <div class="card-body">
+                    <h1 class="card-title text-center mb-4  "><strong>{{ course.name }}</strong></h1>
+                    
+                    <ul class="list-group list-group-flush ms-5">
+                        <li class="list-group-item">
+                            <strong>Branches:</strong> 
+                            <span class="ms-2">{{ course.branches }}</span>
+                        </li>
+                        <li class="list-group-item">
+                            <strong>Duration:</strong> 
+                            <span class="ms-2">{{ course.duration }}</span>
+                        </li>
+                        <li class="list-group-item">
+                            <strong>Eligibility:</strong> 
+                            <span class="ms-2">{{ course.eligibility }}</span>
+                        </li>
+                        <li class="list-group-item">
+                            <strong>FEES:</strong> 
+                            <span class="ms-2">{{ course.fees }}</span>
+                        </li>
+                    </ul>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

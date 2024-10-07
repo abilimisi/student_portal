@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+     <table border=''>
+
+            <tr>
+                <th>Fullname</th>
+                <th>image</th>
+                <th>father_name</th>
+                <th>date_of_birth</th>
+                <th>gender</th>
+                <th>caste</th>
+                <th>mobile</th>
+                <th>email</th>
+            </tr>
+
+            {% for i in data1 %}
+         <tr>
+           <td>   {{ i.fullname }} </td>
+           <td>   {{ i.image }}  </td>
+           <td>   {{ i.father_name }}   </td>
+           <td>   {{ i.date_of_birth }} </td>
+           <td>   {{ i.gender}}  </td>
+           <td>   {{ i.caste }}   </td>
+             <td>   {{ i.mobile }}   </td>
+             <td>   {{ i.email }}   </td>
+
+            {% endfor %}
+
+</body>
+</html>

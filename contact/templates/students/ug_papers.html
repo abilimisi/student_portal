@@ -1,0 +1,37 @@
+{% extends 'layout/main.html' %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div class="card shadow-lg">
+                <div class="card-body">
+                    <h1 class="card-title text-center mb-4"><strong>RCUB Question Papers</strong></h1>
+                    
+                    <ul class="list-group list-group-flush ms-5">
+                        {% for paper in papers %}
+                        <li class="list-group-item">
+                            <strong>Bachelor of Science (BSc)</strong>
+                            <a class="ms-4" href="{{ paper.bsc.url }}">Download</a>
+                        </li>
+                        <li class="list-group-item">
+                            <strong>Bachelor of Computer Application (BCA)</strong> 
+                            <a class="ms-4" href="{{ paper.bca.url }}">Download</a>
+                        </li>
+                        <li class="list-group-item">
+                            <strong>Bachelor of Commerce (B.COM)</strong> 
+                            <a class="ms-4" href="{{ paper.bcom.url }}">Download</a>
+                        </li>
+                        <li class="list-group-item">
+                            <strong>Bachelor of Arts (BA)</strong> 
+                            <a class="ms-4" href="{{ paper.ba.url }}">Download</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

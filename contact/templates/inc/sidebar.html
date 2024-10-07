@@ -1,0 +1,59 @@
+<button class="btn btn-secondary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Profile</button>
+
+<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel"></h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+     {% if student %}
+          <div>
+               <img src="{{ student.profile_picture.url }}" class="d-block mx-auto" alt="Profile Picture"
+                    style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%;" />
+               <h4 class="text-center mt-4">{{ student.user.first_name }} {{ student.user.last_name }}</h4><br>
+               <h5>Register No: {{ student.register_number }}</h5>
+               <h5>College ID: {{ student.college_id }}</h5>
+          </div>
+          <hr>
+          <a class="nav-link" href="{% url 'results' %}">Results</a>
+          <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+     {% else %}
+          <p>Create Your Profile</p>
+          <a class="nav-link" href="{% url 'login' %}">Login</a>
+          <a class="nav-link" href="{% url 'signup' %}">Sign Up</a>
+     {% endif %}
+ 
+  </div>
+</div> 
+
+
+<!-- Full-width button aligned to the left -->
+ <!--
+<button class="btn btn-primary w-100 text-start" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+  Profile
+</button>
+
+<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+<div class="offcanvas-header">
+  <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel"></h5>
+  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+</div>
+<div class="offcanvas-body">
+  {% if student %}
+        <div>
+             <img src="{{ student.profile_picture.url }}" class="d-block mx-auto" alt="Profile Picture"
+                  style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%;" />
+             <h4 class="text-center mt-4">{{ student.user.first_name }} {{ student.user.last_name }}</h4><br><hr>
+             <h5> Register No : {{ student.register_number }}</h5>
+             <h5> College ID : {{ student.college_id }}</h5>
+        </div><hr>
+        <a class="nav-link" href="{% url 'results' %}">Results</a>
+        <a class="nav-link" href="{% url 'logout' %}">logout</a>
+   {% else %}
+        <p>Please log in to view your profile.</p>
+        <a class="nav-link" href="{% url 'login' %}">Login</a>
+        <a class="nav-link" href="{% url 'signup' %}">Sign Up</a>
+   {% endif %}
+</div>
+</div>
+-->
